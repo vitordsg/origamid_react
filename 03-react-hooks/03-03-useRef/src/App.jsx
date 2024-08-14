@@ -44,7 +44,7 @@ const App = () => {
       <div>
         <p>{notificacao}</p>
         <button onClick={handleClickCarrinho}>
-          Adicionar Carrinho {carrinho}
+          Adicionar ao Carrinho {carrinho}
         </button>
       </div>
     </>
