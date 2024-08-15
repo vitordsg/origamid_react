@@ -10,7 +10,7 @@ const App = () => {
 
   function handleClickCarrinho() {
     setCarrinho(carrinho + 1);
-    setNotificacao("Item adicionado ao carrinho");
+    setNotificacao("Item adicionado ao carrinho!");
     clearTimeout(timeoutRef.current);
     timeoutRef.current = setTimeout(() => {
       setNotificacao(null);
