@@ -25,11 +25,27 @@ const Preco = styled.p`
 `;
 
 const Comprar = styled.button`
-  background: #000;
+  background: ${({ativo}) => (ativo ? '#000' : '#fff')};
+  font-size: 1rem;
+  border: 2px solid #000;
+  border-radius: 5px;
+  padding: 0.5rem;
+  color: ${({ativo}) => (ativo ? '#fff' : '#000')};
+  cursor: pointer;
+  &:hover {
+    background: tomato;
+  }
 `;
 const App = () => {
+  const [ativo, setAtivo] = React.useState(false)
+
+  function handleClick() {
+    setAtivo(!ativo)
+  }
+
   return (
     <div>
+      <Comprar ativo={ativo} onClick={handleClick}>Compre aqui</Comprar>
       <ProdutosContainer>
         <Produto>
           <Titulo>Notebook</Titulo>
